@@ -1,6 +1,7 @@
 # Docker-In-Docker
 
-Jenkins image with the docker client installed for cases were you want to run docker commands from Jenkins but connect to a daemon running elsewhere (for example the same daemon running this container). The docker daemon is *not* running inside of the container.
+Jenkins image with the docker client installed for cases where you want to run docker commands from Jenkins but connect to a daemon running elsewhere (for example the same daemon running this container). The docker daemon is *not* running inside of the container.
+The task will run as second process inside the image via UNIX socket mapping.
 
 # Tags
 
@@ -11,7 +12,7 @@ Jenkins image with the docker client installed for cases were you want to run do
 # Usage
 ## Using a unix socket
 
-   docker run --privileged=true -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock docker-jenkins-client
+    docker run --privileged=true -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock docker-jenkins-client
 
 ## Using a remote docker host
 
