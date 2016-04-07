@@ -12,7 +12,9 @@ The task will run as second process inside the image via UNIX socket mapping.
 # Usage
 ## Using a unix socket
 
-    docker run --privileged=true -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock docker-jenkins-client
+    1) Do a git clone : git clone https://github.com/Ashish-Chaturvedi/Docker-In-Docker.git
+    2) build the docker image with a tag name
+    3) docker run --privileged=true -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock docker-jenkins-client
 
 ## Using a remote docker host
 
