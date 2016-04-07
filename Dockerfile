@@ -1,5 +1,5 @@
 FROM jenkins:latest
-MAINTAINER Adam Burnett <adam.burnett@dealer.com>
+MAINTAINER ASHISH
 
 ENV DOCKER_VERSION 1.7.0
 ENV DOCKER_HOST unix:///var/run/docker.sock
